@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+spotify_track=$(playerctl --player=spotify metadata --format "{{title}} - {{artist}}")
+spotify_status=$(playerctl --player=spotify status)
+
+if [[ $spotify_status = "Playing" ]]; then
+  if [[ $spotify_track = "Spotify Free" ]]; then
+    echo "[Spotify] Paused"
+  else
+    echo "$spotify_track"
+  fi
+else
+  track=$(mpc -f '%title% - %artist%' current)
+  time=$(mpc status | grep -E '[0-9]+:[0-9]+' | awk -F '[ ]+' '{print $3}')
+
+  printf "%s  %s" "$track" "$time"
+fi
+

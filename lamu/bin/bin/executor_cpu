@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+
+cpus=( $(dstat -c -C 0,1,2,3 --float 1 1 | awk '/^[ ]*[0-9]+/ {print $1+$2+$4, $6+$7+$9, $11+$12+$14, $16+$17+$19}') )
+fgcolors=()
+i=0
+
+for cpu in ${cpus[@]}; do
+	if (( $(echo "$cpu > 100.0" | bc) )); then
+		${cpu[$i]}="100.0"
+		fgcolors[$i]="#ce3b67"
+	elif (( $(echo "$cpu > 75.0" | bc) )); then
+		fgcolors[$i]="#ce3b67"
+	elif (( $(echo "$cpu > 25.0" | bc) )); then
+		fgcolors[$i]="#ffd490"
+	else
+		fgcolors[$i]="#64cabf"
+	fi
+	i=$(($i+1))
+done
+
+span="<span foreground='%s'>%5.1f%% </span>"
+
+printf "$span  $span  $span  $span" ${fgcolors[0]} ${cpus[0]} ${fgcolors[1]} ${cpus[1]} ${fgcolors[2]} ${cpus[2]} ${fgcolors[3]} ${cpus[3]}
+
+#dstat -c -C 0,1,2,3 --float | stdbuf -oL awk '/[ \t]+[0-9]+/ {printf "%5.1f%   %5.1f%   %5.1f%   %5.1f%  \n", $1+$2+$4, $6+$7+$9, $11+$12+$14, $16+$17+$19}'
+

@@ -1,0 +1,365 @@
+#-------------------------------------
+# Gradients
+#-------------------------------------
+# Backgrounds
+# Background 1: Panel
+rounded = 6
+border_width = 0
+border_sides = TBLR
+border_content_tint_weight = 0
+background_content_tint_weight = 0
+background_color = #2c2e3a 60
+border_color = #f4f6f6 100
+background_color_hover = #eeeeee 0
+border_color_hover = #bbbbbb 0
+background_color_pressed = #eeeeee 0
+border_color_pressed = #bbbbbb 0
+
+# Background 2: Executor
+rounded = 0
+border_width = 0
+border_sides = TBLR
+border_content_tint_weight = 0
+background_content_tint_weight = 0
+background_color = #2c2e3a 80
+border_color = #f4f6f6 100
+background_color_hover = #eeeeee 0
+border_color_hover = #bbbbbb 0
+background_color_pressed = #eeeeee 0
+border_color_pressed = #bbbbbb 0
+
+#-------------------------------------
+# Panel
+panel_items = CEEEEFEEEEEEEE
+panel_size = 100% 30
+panel_margin = 12 6
+panel_padding = 28 3 14
+panel_background_id = 1
+wm_menu = 0
+panel_dock = 0
+panel_pivot_struts = 0
+panel_position = bottom center horizontal
+panel_layer = top
+panel_monitor = all
+panel_shrink = 0
+autohide = 0
+autohide_show_timeout = 0
+autohide_hide_timeout = 2.0
+autohide_height = 1
+strut_policy = follow_size
+panel_window_name = tint2-bottom
+disable_transparency = 0
+mouse_effects = 1
+font_shadow = 0
+mouse_hover_icon_asb = 100 0 10
+mouse_pressed_icon_asb = 100 0 0
+scale_relative_to_dpi = 0
+scale_relative_to_screen_height = 0
+
+#-------------------------------------
+# Clock
+time1_format = %a %d %b  %H:%M    
+time2_format = 
+time1_font = sans bold 9
+time1_timezone = 
+time2_timezone = 
+time2_font = sans bold 7
+clock_font_color = #f4f6f6 100
+clock_padding = 0 0
+clock_background_id = 0
+clock_tooltip = 
+clock_tooltip_timezone = 
+clock_lclick_command = st -n calcurse -e calcurse
+clock_rclick_command = 
+clock_mclick_command = 
+clock_uwheel_command = 
+clock_dwheel_command = 
+
+#-------------------------------------
+# CPU executor
+execp = new
+execp_command = executor_cpu
+execp_interval = 1
+execp_has_icon = 0
+execp_cache_icon = 1
+execp_continuous = 0
+execp_markup = 1
+execp_monitor = all
+execp_lclick_command = 
+execp_rclick_command = 
+execp_mclick_command = 
+execp_uwheel_command = 
+execp_dwheel_command = 
+execp_font = mono bold 10
+execp_font_color = #f4f6f6 100
+execp_padding = 0 0
+execp_background_id = 0
+execp_centered = 1
+execp_icon_w = 0
+execp_icon_h = 0
+execp_tooltip =
+
+#-------------------------------------
+# RAM executor
+execp = new
+execp_command = executor_ram
+execp_interval = 1
+execp_has_icon = 0
+execp_cache_icon = 1
+execp_continuous = 0
+execp_markup = 1
+execp_monitor = all
+execp_lclick_command = 
+execp_rclick_command = 
+execp_mclick_command = 
+execp_uwheel_command = 
+execp_dwheel_command = 
+execp_font = mono bold 10
+execp_font_color = #f4f6f6 100
+execp_padding = 0 0
+execp_background_id = 0
+execp_centered = 1
+execp_icon_w = 0
+execp_icon_h = 0
+execp_tooltip =
+
+#-------------------------------------
+# Net executor
+execp = new
+execp_command = executor_net
+execp_interval = 1
+execp_has_icon = 0
+execp_cache_icon = 1
+execp_continuous = 0
+execp_markup = 1
+execp_monitor = all
+execp_lclick_command = 
+execp_rclick_command = 
+execp_mclick_command = 
+execp_uwheel_command = 
+execp_dwheel_command = 
+execp_font = mono bold 10
+execp_font_color = #f4f6f6 100
+execp_padding = 0 0
+execp_background_id = 0
+execp_centered = 1
+execp_icon_w = 0
+execp_icon_h = 0
+execp_tooltip =
+
+#-------------------------------------
+# Pacman updates executor
+execp = new
+execp_command = printf "<span foreground='#7b86f9'>%6d</span> <span foreground='#7b86f9'></span>" "$(checkupdates | wc -l)"
+execp_interval = 3600
+execp_has_icon = 0
+execp_cache_icon = 1
+execp_continuous = 0
+execp_markup = 1
+execp_monitor = all
+execp_lclick_command = 
+execp_rclick_command = 
+execp_mclick_command = 
+execp_uwheel_command = 
+execp_dwheel_command = 
+execp_font = mono bold 10
+execp_font_color = #f4f6f6 100
+execp_padding = 0 0
+execp_background_id = 0
+execp_centered = 1
+execp_icon_w = 0
+execp_icon_h = 0
+execp_tooltip =
+
+#-------------------------------------
+# Repeat executor
+execp = new
+execp_command = executor_mpc_repeat
+execp_interval = 1
+execp_has_icon = 0
+execp_cache_icon = 1
+execp_continuous = 0
+execp_markup = 1
+execp_monitor = all
+execp_lclick_command = mpc repeat
+execp_rclick_command =
+execp_mclick_command =
+execp_uwheel_command =
+execp_dwheel_command =
+execp_font = mono bold 10
+execp_font_color = #f4f6f6 100
+execp_padding = 0 0
+execp_background_id = 0
+execp_centered = 1
+execp_icon_w = 0
+execp_icon_h = 0
+execp_tooltip =
+
+#-------------------------------------
+# Random executor
+execp = new
+execp_command = executor_mpc_random
+execp_interval = 1
+execp_has_icon = 0
+execp_cache_icon = 1
+execp_continuous = 0
+execp_markup = 1
+execp_monitor = all
+execp_lclick_command = mpc random
+execp_rclick_command =
+execp_mclick_command =
+execp_uwheel_command =
+execp_dwheel_command =
+execp_font = mono bold 10
+execp_font_color = #f4f6f6 100
+execp_padding = 0 0
+execp_background_id = 0
+execp_centered = 1
+execp_icon_w = 0
+execp_icon_h = 0
+execp_tooltip =
+
+#-------------------------------------
+# Single executor
+execp = new
+execp_command = executor_mpc_single
+execp_interval = 1
+execp_has_icon = 0
+execp_cache_icon = 1
+execp_continuous = 0
+execp_markup = 1
+execp_monitor = all
+execp_lclick_command = mpc single
+execp_rclick_command =
+execp_mclick_command =
+execp_uwheel_command =
+execp_dwheel_command =
+execp_font = mono bold 10
+execp_font_color = #f4f6f6 100
+execp_padding = 0 0
+execp_background_id = 0
+execp_centered = 1
+execp_icon_w = 0
+execp_icon_h = 0
+execp_tooltip =
+
+#-------------------------------------
+# Current song executor
+execp = new
+execp_command = executor_song
+execp_interval = 1
+execp_has_icon = 0
+execp_cache_icon = 1
+execp_continuous = 0
+execp_markup = 1
+execp_monitor = all
+execp_lclick_command = 
+execp_rclick_command = 
+execp_mclick_command =
+execp_uwheel_command = mpc volume +1
+execp_dwheel_command = mpc volume -1
+execp_font = mono bold 10
+execp_font_color = #f4f6f6 100
+execp_padding = 0 0
+execp_background_id = 0
+execp_centered = 1
+execp_icon_w = 0
+execp_icon_h = 0
+execp_tooltip =
+
+#-------------------------------------
+# Previous song executor
+execp = new
+execp_command = echo "<span foreground='#ffd490'></span>"
+execp_interval = 1
+execp_has_icon = 0
+execp_cache_icon = 1
+execp_continuous = 0
+execp_markup = 1
+execp_monitor = all
+execp_lclick_command = mpc prev
+execp_rclick_command =
+execp_mclick_command =
+execp_uwheel_command =
+execp_dwheel_command =
+execp_font = mono bold 10
+execp_font_color = #f4f6f6 100
+execp_padding = 0 0
+execp_background_id = 0
+execp_centered = 1
+execp_icon_w = 0
+execp_icon_h = 0
+execp_tooltip =
+
+#-------------------------------------
+# Play/pause song executor
+execp = new
+execp_command = executor_play
+execp_interval = 1
+execp_has_icon = 0
+execp_cache_icon = 1
+execp_continuous = 0
+execp_markup = 1
+execp_monitor = all
+execp_lclick_command = mpc toggle
+execp_rclick_command =
+execp_mclick_command =
+execp_uwheel_command =
+execp_dwheel_command =
+execp_font = mono bold 10
+execp_font_color = #f4f6f6 100
+execp_padding = 1 1
+execp_background_id = 0
+execp_centered = 1
+execp_icon_w = 0
+execp_icon_h = 0
+execp_tooltip =
+
+#-------------------------------------
+# Next song executor
+execp = new
+execp_command = echo "<span foreground='#7b86f9'></span>"
+execp_interval = 1
+execp_has_icon = 0
+execp_cache_icon = 1
+execp_continuous = 0
+execp_markup = 1
+execp_monitor = all
+execp_lclick_command = mpc next
+execp_rclick_command =
+execp_mclick_command =
+execp_uwheel_command =
+execp_dwheel_command =
+execp_font = mono bold 10
+execp_font_color = #f4f6f6 100
+execp_padding = 0 0
+execp_background_id = 0
+execp_centered = 1
+execp_icon_w = 0
+execp_icon_h = 0
+execp_tooltip =
+
+#-------------------------------------
+# Volume executor
+execp = new
+execp_command = executor_volume
+execp_interval = 1
+execp_has_icon = 0
+execp_cache_icon = 1
+execp_continuous = 0
+execp_markup = 1
+execp_monitor = all
+execp_lclick_command = amixer sset -M Master 1%+
+execp_rclick_command = amixer sset -M Master 1%-
+execp_mclick_command = amixer sset -M Master toggle
+execp_uwheel_command = amixer sset -M Master 1%+
+execp_dwheel_command = amixer sset -M Master 1%-
+execp_font = mono bold 10
+execp_font_color = #f4f6f6 100
+execp_padding = 0 0
+execp_background_id = 0
+execp_centered = 1
+execp_icon_w = 0
+execp_icon_h = 0
+execp_tooltip = 
+

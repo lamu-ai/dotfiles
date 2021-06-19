@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+if [[ $(xdotool search --onlyvisible -n "^tint2-bottom$" | wc -l) -eq 1 ]] ; then
+	xdotool search --name "^tint2-bottom$" windowunmap
+  bspc config bottom_padding 0
+else
+	xdotool search --name "^tint2-bottom$" windowmap
+fi
+

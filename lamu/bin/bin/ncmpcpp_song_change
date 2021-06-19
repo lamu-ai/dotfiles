@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+COVER="/tmp/albumart.jpg"
+
+# Get album art from file
+ffmpeg -i "$HOME/msc/$(mpc current -f %file%)" "$COVER" -y &> /dev/null
+# Send notification
+dunstify --icon "$COVER" "$(mpc current -f '%title%')" "$(mpc current -f '%artist%
+- %album%')"
+

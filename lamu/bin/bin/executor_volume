@@ -1,0 +1,44 @@
+#!/usr/bin/env bash
+
+vol=$(amixer sget -M Master | awk -F '[][%]' '/Left:/ {print $2}')
+mute=$(amixer sget -M Master | awk -F '[][%]' '/Left:/ {print $7}')
+
+if [[ $mute == "off" ]]; then
+	fgcolor="#d66084"
+	bar="<span foreground='$fgcolor'>    </span>"
+elif [[ $vol -eq 100 ]]; then
+	fgcolor="#81d3ca"
+	bar="<span foreground='$fgcolor'>    </span>"
+elif [[ $vol -gt 66 ]]; then
+	fgcolor="#64cabf"
+	if [[ $vol -gt 80 ]]; then
+		bar="<span foreground='$fgcolor'>    </span>"
+	else
+		bar="<span foreground='$fgcolor'>    </span>"
+	fi
+elif [[ $vol -gt 33 ]]; then
+	fgcolor="#ffd490"
+	if [[ $vol -gt 60 ]]; then
+		bar="<span foreground='$fgcolor'>    </span>"
+	elif [[ $vol -gt 40 ]]; then
+		bar="<span foreground='$fgcolor'>   </span> "
+	else
+		bar="<span foreground='$fgcolor'>  </span>  "
+	fi
+elif [[ $vol -gt 0 ]]; then
+	fgcolor="#ce3b67"
+	if [[ $vol -gt 20 ]]; then
+		bar="<span foreground='$fgcolor'>  </span>  "
+	else
+		bar="<span foreground='$fgcolor'> </span>   "
+	fi
+else
+	bar="    "
+fi
+
+# Trailing spaces because tint2 horizontal padding is not working
+# as expected
+printf "%3d%%  %s    " "$vol" "$bar"
+
+
+

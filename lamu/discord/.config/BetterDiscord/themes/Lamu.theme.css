@@ -1,0 +1,182 @@
+/**
+ * @name Lamù
+ * @author https://github.com/lamu-ai
+ * @version 1
+ * @description Highly customizable and beautiful theme for BetterDiscord. Customized based
+ *              on my Lamù theme.
+ * @source https://github.com/ClearVision/ClearVision-v6, https://github.com/lamu-ai/dotfiles
+ * @website https://clearvision.gitlab.io
+ * @invite 2fKpjAR (ClearVision)
+*/
+
+@import url('https://clearvision.gitlab.io/v6/main.css');
+@import url('https://discordstyles.github.io/RadialStatus/base.css');
+
+:root {
+  --main-color: #FDD490;
+  --hover-color: #FDDBA4;
+  --success-color: #64CABF;
+  --main-color: #64CABF;
+  --hover-color: #FDD490;
+  --success-color: #64CABF;
+  --danger-color: #CE3B67;
+  --url-color: #B361AF;
+  --background-image: transparent;
+  --background-shading: 0%;
+  --background-position: center;
+  --background-size: cover;
+  --background-repeat: no-repeat;
+  --background-attachment: fixed;
+  --background-brightness: 100%;
+  --background-contrast: 100%;
+  --background-saturation: 100%;
+  --background-grayscale: 0%;
+  --background-invert: 0%;
+  --background-blur: 0px;
+  --background-overlay: rgb(44,46,58,1);
+  --user-popout-image: transparent;
+  --user-popout-position: center;
+  --user-popout-size: cover;
+  --user-popout-repeat: no-repeat;
+  --user-popout-attachment: fixed;
+  --user-popout-brightness: 100%;
+  --user-popout-contrast: 100%;
+  --user-popout-saturation: 100%;
+  --user-popout-grayscale: 0%;
+  --user-popout-invert: 0%;
+  --user-popout-blur: 3px;
+  --user-modal-image: transparent;
+  --user-modal-position: center;
+  --user-modal-size: cover;
+  --user-modal-repeat: no-repeat;
+  --user-modal-attachment: fixed;
+  --user-modal-brightness: 100%;
+  --user-modal-contrast: 100%;
+  --user-modal-saturation: 100%;
+  --user-modal-grayscale: 0%;
+  --user-modal-invert: 0%;
+  --user-modal-blur: 3px;
+  --home-icon: url('https://clearvision.gitlab.io/icons/discord.svg');
+  --home-position: center;
+  --home-size: 40px;
+  --channel-unread: #FFD490;
+  --channel-color: rgba(244, 246, 246, 0.8);
+  --muted-color: #656770;
+  --channel-text-selected: #2c2e3a;
+  --online-color: #64CABF;
+  --idle-color: #FFD490;
+  --dnd-color: #CE3B67;
+  --streaming-color: #9774D4;
+  --offline-color: #656770;
+  --main-font: ''sans-serif'';
+  --code-font: ''monospace'';
+  --channels-width: 220px;
+  --members-width: 240px;
+  --backdrop-overlay: rgba(0,0,0,0.8);
+  --backdrop-image: var(--background-image);
+  --backdrop-position: var(--background-position);
+  --backdrop-size: var(--background-size);
+  --backdrop-repeat: var(--background-repeat);
+  --backdrop-attachment: var(--background-attachment);
+  --backdrop-brightness: var(--background-brightness);
+  --backdrop-contrast: var(--background-contrast);
+  --backdrop-saturation: var(--background-saturation);
+  --backdrop-invert: var(--background-invert);
+  --backdrop-grayscale: var(--background-grayscale);
+  --backdrop-sepia: var(--background-sepia);
+  --backdrop-blur: var(--background-blur);
+  --bd-blue: var(--main-color);
+  --bd-blue-hover: var(--hover-color);
+  --bd-blue-active: var(--hover-color);
+  --rs-small-spacing: 2px;
+  --rs-large-spacing: 2px;
+  --rs-width: 2px;
+  --rs-avatar-shape: 50%;
+  --rs-online-color: #64CABF;
+  --rs-idle-color: #FFD490;
+  --rs-dnd-color: #CE3B67;
+  --rs-offline-color: #656770;
+  --rs-streaming-color: #9774D4;
+  --text-link: #B361AF;
+  --text-positive: #64CABF;
+  --text-warning: #FFD490;
+  --text-danger: #CE3B67;
+  --info-positive-foreground: #64CABF;
+  --info-warning-foreground: #FFD490;
+  --info-danger-foreground: #CE3B67;
+  --status-positive-background: #64CABF;
+  --status-positive-text: #F4F6F6;
+  --status-warning-background: #FFD490;
+  --status-danger-background: #CE3B67;
+  --status-danger-text: #F4F6F6;
+  --header-primary: #F4F6F6;
+  --interactive-active: #F4F6F6;
+}
+
+/* Unread channel text */
+.wrapper-2jXpOf.modeUnread-1qO3K1 .content-1x5b-n .mainContent-u_9PKf .name-23GUGE {
+  text-shadow: none;
+}
+.wrapper-2jXpOf.modeUnread-1qO3K1 .content-1x5b-n .mainContent-u_9PKf .icon-1DeIlz {
+  filter: none;
+}
+
+/* Mute microphone, mute audio and settings button near avatar */
+.button-14-BFJ > .contents-18-Yxp > svg {
+  color: #F4F6F6;
+  opacity: 1.0;
+}
+
+/* Create invite and channel settings button next to channel name */
+.wrapper-2jXpOf.modeSelected-346R90 .content-1x5b-n .actionIcon-PgcMM2 {
+  color: #2C2E3A;
+  opacity: 1.0;
+}
+
+/* Number badge (notifications) on folders/channels */
+.numberBadge-2s8kKX, .textBadge-1iylP6 {
+  color: #2C2E3A;
+  font-weight: 500;
+  background: #FFD490 !important;
+  box-shadow: 0 0 10px -3px #FFD490, 0 0 0 1px #FFD490;
+}
+
+/* Direct messages name */
+.container-2Pjhx-.selected-aXhQR6 .name-uJV0GL {
+  color: #2C2E3A;  
+}
+
+/* Direct messages status/activity */
+.container-2Pjhx-.selected-aXhQR6 .activity-525YDR, .container-2Pjhx-.selected-aXhQR6 .subText-1KtqkB, .container-2Pjhx-.selected-aXhQR6 .activityText-OW8WYb, .container-2Pjhx-.selected-aXhQR6 .activity-2Gy-9S, .container-2Pjhx-.selected-aXhQR6 .activityText-yGKsKm  {
+  color: #2C2E3A;
+  text-shadow: none;
+}
+.container-2Pjhx-.selected-aXhQR6 .subText-1KtqkB > strong, .container-2Pjhx-.selected-aXhQR6 .activityText-OW8WYb > strong, .container-2Pjhx-.selected-aXhQR6 .activityText-yGKsKm > strong {
+  color: #2C2E3A;
+}
+
+/* Colored bars in roles */
+.members-1998pB .membersGroup-v9BXpm:before {
+  background: #64CABF;
+}
+.members-1998pB .membersGroup-v9BXpm:after {
+  background: #64CABF;
+}
+
+/* Colored bars in channel groups */
+.name-3l27Hl:before {
+  background: #64CABF;
+}
+.name-3l27Hl:after {
+  background: #64CABF;
+}
+
+/* Channel icon in header */
+.container-1r6BKw .children-19S4PO .icon-22AiRD {
+  filter: none;
+}
+
+/* Live icon on server */
+.icon-3s6X1M {
+  color: #FFD490;
+}

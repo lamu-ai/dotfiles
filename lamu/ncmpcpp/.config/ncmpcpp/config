@@ -1,0 +1,98 @@
+# Directories and connection
+ncmpcpp_directory = "~/.config/ncmpcpp"
+lyrics_directory = "~/msc/lyrics"
+mpd_host = "127.0.0.1"
+mpd_port = "6600"
+mpd_music_dir = "~/msc"
+
+# Visualizer
+visualizer_data_source = "/tmp/mpd.fifo"
+visualizer_output_name = "fft"
+visualizer_in_stereo = "yes"
+visualizer_type = "ellipse"
+visualizer_look = "▗"
+#visualizer_look = "+|"
+visualizer_fps = "60"
+
+# UI
+song_list_format = "{$3%t$R$4 %a }|{$3%f$R$4 %l}"
+song_status_format = "{$3%t$9 - $4%a}|{$3%f}"
+song_library_format = "{%n - %t}|{%f}"
+now_playing_prefix = "$b"
+browser_playlist_prefix = "$b"
+modified_item_prefix = "$3 $9 "
+browser_sort_mode = "name"
+song_window_title_format = "%t - %a"
+song_columns_list_format = "(75)[green]{tE}(25)[yellow]{arE}"
+playlist_shorten_total_times = "yes"
+playlist_display_mode = "classic"
+browser_display_mode = "classic"
+search_engine_display_mode = "classic"
+playlist_editor_display_mode = "columns"
+progressbar_look = "━━━"
+user_interface = "classic"
+media_library_hide_album_dates = "yes"
+header_visibility = "no"
+
+# Lyrics
+follow_now_playing_lyrics = "yes"
+fetch_lyrics_for_current_song_in_background = "no"
+external_editor = "vim"
+use_console_editor = "yes"
+
+# General
+message_delay_time = "1"
+execute_on_song_change = "ncmpcpp_song_change"
+incremental_seeking = "no"
+seek_time = "1"
+volume_change_step = "1"
+autocenter_mode = "yes"
+cyclic_scrolling = "yes"
+allow_for_physical_item_deletion = "yes"
+jump_to_now_playing_song_at_start = "yes"
+ask_before_clearing_playlists = "yes"
+mouse_support = "yes"
+mouse_list_scroll_whole_page = "no"
+lines_scrolled = "1"
+
+# Colors
+# colors: none, black, red, green, yellow, blue, magenta, cyan, white
+# attributes: standout, underline, reverse, blink, dim, bold
+#
+# Colors can also be given as an integer representing a terminal specific
+# color code. The special color, none, represents the terminals default color.
+# Enable/disable colors.
+colors_enabled = "yes"
+# Color of empty tag marker
+empty_tag_color = red
+# Color of header window
+#header_window_color = COLOR
+# Color of volume state
+#volume_color = COLOR
+# Color of lines separating header and statusbar from main window
+#state_line_color = COLOR
+# Color of MPD status flags
+#state_flags_color = COLOR
+# Color of main window
+main_window_color = green
+# One of colors used in Song info, Tiny tag editor and Search engine
+color1 = red
+# One of colors used in Song info, Tiny tag editor and Search engine
+color2 = green
+# Color of progressbar
+progressbar_color = red
+# Color of part of progressbar that represents elapsed time
+progressbar_elapsed_color = green
+# Color of statusbar
+statusbar_color = white
+# Color of current track time shown in statusbar
+#statusbar_time_color = COLOR
+# Color of player state shown in statusbar
+#player_state_color = COLOR
+# Color of separators used in alternative user interface
+#alternative_ui_separator_color = COLOR
+# Border color of pop-up windows. If set to 'none', no border will be shown
+#window_border_color = BORDER
+# Color of active window's border
+#active_window_border = COLOR
+

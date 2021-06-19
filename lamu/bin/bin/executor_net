@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+rxtx=( $( (cat /proc/net/dev; sleep 1; cat /proc/net/dev) | awk '/enp0s3/ {i++; rx[i]=$2; tx[i]=$10}; END{print rx[2]-rx[1], tx[2]-tx[1]}') )
+fgcolors=()
+i=0
+
+for bytes in ${rxtx[@]}; do
+	if [[ $bytes -gt 20000000 ]]; then
+		fgcolors[$i]="#64cabf"
+	elif [[ $bytes -gt 4000000 ]]; then
+		fgcolors[$i]="#ffd490"
+	else
+		fgcolors[$i]="#ce3b67"
+	fi
+	i=$(( i+1 ))
+done
+
+printf "<span foreground='%s'>$(echo ${rxtx[0]} | numfmt --to=si --format %6.1f) </span>  <span foreground='%s'>$(echo ${rxtx[1]} | numfmt --to=si --format %6.1f) </span>" "${fgcolors[0]}" "${fgcolors[1]}"
+
+#(cat /proc/net/dev; sleep 1; cat /proc/net/dev) | awk '/enp0s3/ {i++; rx[i]=$2; tx[i]=$10}; END{printf "%d   %d  \n", rx[2]-rx[1], tx[2]-tx[1]}' | numfmt --to=si -d ' ' --field 1,4 --format %6.1f
+

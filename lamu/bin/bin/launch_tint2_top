@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# Trick to launch tint2 in the below layer of bspwm
+# Taken from https://github.com/baskerville/bspwm/issues/1005#issuecomment-778158764
+
+#killall -q tint2
+
+#tint2 -c ~/.config/tint2/tint2rc.top &
+#sleep 0.1 &&
+#tint2 -c ~/.config/tint2/tint2rc.bottom &
+#sleep 0.1 &&
+
+
+#if pgrep -x "tint2" > /dev/null ; then
+#	xdo above -t "$(xdo id -N Bspwm -n root | sort | head -n 1)" $(xdo id -a "tint2-top")
+	xdo below -t $(xdo id -a "tint2-bottom") "$(xdo id -N Bspwm -n root)"
+#fi
+

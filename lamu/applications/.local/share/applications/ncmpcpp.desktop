@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=ncmpcpp
+GenericName=Music Player
+Icon=ncmpcpp
+Exec=st -g 100x25 -n ncmpcpp -e ncmpcpp
+StartupNotify=true
+Terminal=false

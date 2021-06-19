@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+playing=$(mpc status | awk '/^\[[a-z]+\]/ {print $1}')
+
+if [[ "$playing" == "[playing]" ]]; then
+	font="Font Awesome 6 Pro Solid"
+else
+	font="Font Awesome 6 Pro Regular"
+fi
+
+echo "<span face='$font' fgcolor='#ce3b67'></span>"
+

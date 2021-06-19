@@ -1,0 +1,104 @@
+### Applications ###
+
+# Make sxhkd reload its configuration files:
+alt + Escape
+	pkill -USR1 -x sxhkd
+
+# Open the terminal emulator
+alt + t
+  st -g 100x25 -e tmux 
+
+# Rofi drun
+alt + m
+  rofi -show drun -cache-dir .config/rofi
+
+# Rofi ssh
+alt + s
+  rofi -show ssh -cache-dir .config/rofi
+
+# Take a screenshot
+Print
+	scmenu
+
+# Show/hide tint2 side panel
+super + space
+	manage_tint2_bottom
+
+# Change video source from mDP to HDMI1
+ctrl + alt + Next
+	ddccontrol -r 0x60 -w 17 dev:/dev/i2c-5
+
+# Change video source from HDMI1 to mDP
+ctrl + alt + Prior
+	ddccontrol -r 0x60 -w 16 dev:/dev/i2c-5
+
+### bspwm - functional ###
+
+# Exit/restart bspwm
+alt + ctrl + {e,r}
+	bspc {quit,wm -r}
+
+# Kill/close a node
+alt + shift + {k,q}
+	bspc node -{k,c}
+
+# Switch active workspaces
+alt + {Tab, shift + Tab}
+	bspc {desktop next.occupied -f, desktop prev.occupied -f}
+
+# Focus or send to the given desktop
+alt + {_,shift + }{1-9,0}
+	bspc {desktop -f,node -d} '^{1-9,10}'
+
+# Set the window state
+alt + space
+	bspc node focused.floating -t tiled || bspc node -t floating
+alt + f
+	bspc node -t \~fullscreen
+
+# Toggle stay on top
+alt + shift + t
+	bspc node focused.above -l normal || bspc node -l above
+
+# Hide and unhide nodes
+alt + shift + minus
+	bspc node focused -g hidden=on
+alt + minus
+	bspc node $(bspc query -N -n .hidden | tail -n1) -d focused -g hidden=off
+
+# Swap nodes (arrow)
+alt + shift + {Up,Down,Left,Right}
+	bspc node -s {north,south,west,east}
+
+# Swap nodes (vi)
+alt + shift + {k,j,h,l}
+	bspc node -s {north,south,west,east}
+
+# Focus node (arrow)
+alt + {Up,Down,Left,Right}
+	bspc node -f {north,south,west,east}
+
+# Focus node (vi)
+alt + {k,j,h,l}
+	bspc node -f {north,south,west,east}
+
+### bspwm - aesthetics ###
+
+# Increment/reduce gaps
+super + {minus,plus}
+  bspc config -d focused window_gap $(( $(bspc config -d focused window_gap) {-,+} 1))
+
+### Volume/Media controls ###
+
+# Volume up/down
+{XF86AudioRaiseVolume,XF86AudioLowerVolume}
+	amixer sset -M Master 1%{+,-}
+
+# Volume play/pause
+{XF86AudioPlay,XF86AudioPause}
+	mpc {play, pause}
+
+# Volume mute/unmute
+XF86AudioMute
+	amixer sset -M Master toggle
+

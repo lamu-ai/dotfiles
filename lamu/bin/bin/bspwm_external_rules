@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+wid="$1"
+class="$2"
+instance="$3"
+eval $4
+desktop="$(bspc query -D -d ${desktop:-focused})"
+
+if [[ "$class" = "St" && ("$desktop" = "$(bspc query -D -d ^2)" || "$desktop" = "$(bspc query -D -d ^3)" || "$desktop" = "$(bspc query -D -d ^8)") ]]; then
+  echo "state=floating"
+fi
+

@@ -1,0 +1,8 @@
+st.font: monospace:pixelsize=12:antialias=true:autohint=true
+st.borderpx: 20
+st.cwscale: 1.0
+
+ncmpcpp.font: monospace:pixelsize=12:antialias=true:autohint=true
+ncmpcpp.borderpx: 20
+ncmpcpp.cwscale: 0.9
+

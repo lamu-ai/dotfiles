@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+if [[ $(mpc status | grep "single: on") ]]; then
+  fgcolor="#64cabf"
+else
+  fgcolor="#ce3b67"
+fi
+
+echo "<span foreground='$fgcolor'></span>"
+

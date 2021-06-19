@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+ram=$(free -b | awk '/^Mem:/ { print 100 * ($2 - $7) / $2 }')
+
+if (( $(echo "$ram > 75.0" | bc) )); then
+	fgcolor="#ce3b67"
+elif (( $(echo "$ram > 25.0" | bc) )); then
+	fgcolor="#ffd490"
+else
+	fgcolor="#64cabf"
+fi
+
+printf "<span foreground='%s'>%5.1f%% </span>" $fgcolor $ram
+
+#free -b -s1 | stdbuf -oL awk '/^Mem:/ { printf "<span foreground=\"#ffd490\">%6.1f%  </span>\n", 100 * ($2 - $7) / $2 }'
+
