@@ -28,11 +28,12 @@ useronly=(
   tint2
   wal
   x
+  xdg
 )
 
 zinitdir=~/.config/zsh/.zinit 
 commands=(
   'curl -Ls https://raw.githubusercontent.com/jarun/nnn/master/plugins/getplugs | sh'
-  'wget -P ~/tmp https://github.com/BetterDiscord/Installer/releases/latest/download/BetterDiscord-Linux.AppImage'
+  'wget -P ~/dwn https://github.com/BetterDiscord/Installer/releases/latest/download/BetterDiscord-Linux.AppImage'
   'if [[ -z $(ls -A $zinitdir) ]]; then git clone https://github.com/zdharma/zinit.git $zinitdir; else cd $zinitdir; git pull > /dev/null; fi'
 )
