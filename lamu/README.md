@@ -9,7 +9,15 @@ Also checkout my [Lamù colorscheme for vim/nvim](https://github.com/lamu-ai/lam
 **Warning**: This is *my* list of packages, it contains *a lot* more than the minimum requirements to run the theme.
 
 ```
-pacman -Syu adobe-source-han-serif-otc-fonts alsa-plugins alsa-utils android-tools anki audacity base base-devel blender brave-dev-bin bspwm calcurse calibre cuda cudnn cups ddccontrol devtools dhcpcd discord dstat dunst fcitx-mozc fcitx-qt5 feh fzf giph git grub gzip htop jdk keepassxc kite intel-ucode libappimage libnotify linux linux-firmware maim man-db man-pages mpc mpd mpv ncmpcpp neofetch neovim ngrok nnn nvidia noto-fonts-emoji ntfs-3g nvidia obs-studio obsidian-appimage openboard openssh pacman-contrib pavucontrol playerctl pulseaudio python-pynvim pycharm-professional qbittorrent qolibri rofi rsync stow sudo sxhkd sxiv sysstat  thunar thunar-archive-plugin tmux tint2 ttf-sarasa-gothic unrar unzip w3m wget wmctrl which xarchiver xclip xdo xorg-server xorg-xev xorg-xinit zathura zathura-cb zathura-djvu zathura-pdf-mupdf zip zotero zsh
+pacman -Syu adobe-source-han-serif-otc-fonts alsa-plugins alsa-utils android-tools anki audacity \
+base base-devel blender brave-dev-bin bspwm calcurse calibre cuda cudnn cups ddccontrol devtools \
+dhcpcd discord dstat dunst fcitx-mozc fcitx-qt5 feh fzf giph git grub gzip htop jdk keepassxc kite \
+intel-ucode libappimage libnotify linux linux-firmware maim man-db man-pages mpc mpd mpv ncmpcpp \
+neofetch neovim ngrok nnn nvidia noto-fonts-emoji ntfs-3g nvidia obs-studio obsidian-appimage \
+openboard openssh pacman-contrib pavucontrol playerctl pulseaudio python-pynvim pycharm-professional \
+qbittorrent qolibri rofi rsync stow sudo sxhkd sxiv sysstat thunar thunar-archive-plugin tmux tint2 \
+ttf-sarasa-gothic unrar unzip w3m wget wmctrl which xarchiver xclip xdo xorg-server xorg-xev xorg-xinit \
+zathura zathura-cb zathura-djvu zathura-pdf-mupdf zip zotero zsh
 ```
 
 ```
