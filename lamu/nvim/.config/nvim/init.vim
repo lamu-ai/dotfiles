@@ -8,21 +8,6 @@ endif
 
 call plug#begin()
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'clangd/coc-clangd', { 'do': 'yarn install --frozen-lockfile && yarn build' }
-Plug 'neoclide/coc-css', { 'do': 'yarn install --frozen-lockfile && yarn build' }
-Plug 'antonk52/coc-cssmodules'
-Plug 'LeonardSSH/coc-discord-rpc', { 'do': 'yarn install --frozen-lockfile && yarn build' }
-Plug 'yuki-yano/fzf-preview.vim', { 'do': 'yarn install --frozen-lockfile && yarn build' }
-Plug 'neoclide/coc-html', { 'do': 'yarn install --frozen-lockfile && yarn build' }
-Plug 'neoclide/coc-java', { 'do': 'yarn install --frozen-lockfile && yarn build' }
-Plug 'pappasam/coc-jedi', { 'do': 'yarn install --frozen-lockfile && yarn build' }
-Plug 'neoclide/coc-json', { 'do': 'yarn install --frozen-lockfile && yarn build' }
-Plug 'coc-extensions/coc-omnisharp'
-Plug 'neoclide/coc-snippets', { 'do': 'yarn install --frozen-lockfile && yarn build' }
-Plug 'fannheyward/coc-sql', { 'do': 'yarn install --frozen-lockfile && yarn build' }
-Plug 'neoclide/coc-tsserver', { 'do': 'yarn install --frozen-lockfile && yarn build' }
-Plug 'fannheyward/coc-xml', { 'do': 'yarn install --frozen-lockfile && yarn build' }
-Plug 'neoclide/coc-yaml', { 'do': 'yarn install --frozen-lockfile && yarn build' }
 
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'tpope/vim-fugitive'
@@ -35,6 +20,7 @@ call plug#end()
 
 " coc.nvim {{{
 
+let g:coc_global_extensions = ['coc-clangd', 'coc-css', 'coc-cssmodules', 'coc-discord-rpc', 'coc-fzf-preview', 'coc-html', 'coc-java', 'coc-jedi', 'coc-json', 'coc-omnisharp', 'coc-snippets', 'coc-sql', 'coc-tsserver', 'coc-xml', 'coc-yaml']
 inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
