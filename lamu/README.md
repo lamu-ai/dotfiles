@@ -11,7 +11,7 @@ Also checkout my [Lamù colorscheme for vim/nvim](https://github.com/lamu-ai/lam
 ```
 pacman -Syu adobe-source-han-serif-otc-fonts alsa-plugins alsa-utils android-tools anki audacity \
 base base-devel blender brave-dev-bin bspwm calcurse calibre cuda cudnn cups ddccontrol devtools \
-dhcpcd discord dstat dunst fcitx-mozc fcitx-qt5 feh fzf giph git grub gzip htop jdk keepassxc kite \
+dhcpcd discord dstat dunst fcitx5-configtool fcitx5-gtk fcitx5-mozc fcitx5-qt feh fzf giph git grub gzip htop jdk keepassxc kite \
 intel-ucode libappimage libnotify linux linux-firmware maim man-db man-pages mpc mpd mpv ncmpcpp \
 neofetch neovim ngrok nnn nvidia noto-fonts-emoji ntfs-3g nvidia obs-studio obsidian-appimage \
 openboard openssh pacman-contrib pavucontrol playerctl pulseaudio python-pynvim pycharm-professional \

@@ -14,7 +14,6 @@ useronly=(
   bspwm
   discord
   dunst
-  fcitx
   fontconfig
   git
   gtk
